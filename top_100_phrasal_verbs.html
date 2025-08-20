@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top 100 Phrasal Verbs</title>
+  <link rel="icon" href="https://web.dev/static/articles/building/an-adaptive-favicon/image/example-dark-theme-favico-6a6f6f67bc3e7_856.png?hl=pt-br">
+  <style>
+    :root{
+      --bg: #0f172a; --panel: #111827; --panel-2: #0b1220; --text: #e5e7eb;
+      --muted: #9ca3af; --brand: #7c3aed; --brand-2: #a78bfa; --accent: #10b981;
+      --warning: #f59e0b; --error: #ef4444; --ok: #22c55e;
+    }
+    *{
+      box-sizing:border-box
+    }
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#0a1020 60%,#050812);
+      color:var(--text);
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;
+    }
+    .container{
+      max-width:1100px;
+      margin:40px auto;
+      padding:0 16px
+    }
+    .card{
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.2), transparent 60%),
+                  radial-gradient(800px 400px at 110% 10%, rgba(16,185,129,.12), transparent 60%),
+                  linear-gradient(180deg,var(--panel),var(--panel-2));
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:20px;
+      box-shadow:0 20px 60px rgba(0,0,0,.45);
+      overflow:hidden
+    }
+    header{
+      padding:28px 22px;
+      border-bottom:1px solid rgba(255,255,255,.06);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    h1{
+      font-size:clamp(22px,3.6vw,34px);
+      margin:0;
+      font-weight:800;
+      letter-spacing:.2px
+    }
+    .sub{
+      color:var(--muted);
+      font-size:14px
+    }
+    .phrasal-verb-list{
+      padding:22px 22px 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .phrasal-verb-item{
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding: 15px;
+    }
+    .phrasal-verb{
+      font-weight: 700;
+      color: var(--brand-2);
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+    .meaning-en{
+      font-size: 0.95em;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+    .meaning-pt{
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.85em;
+    }
+    footer{
+      padding:18px 22px;
+      border-top:1px solid rgba(255,255,255,.06);
+      color:var(--muted);
+      font-size:13px;
+      text-align: center;
+    }
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: linear-gradient(180deg,var(--brand),#6d28d9);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,.3);
+    }
+
+    @media (max-width: 768px) {
+      .back-button {
+        top: 10px;
+        left: 10px;
+        padding: 8px 12px;
+        font-size: 0.9em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .back-button {
+        top: 5px;
+        left: 5px;
+        padding: 6px 10px;
+        font-size: 0.8em;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <a href="main.html" class="back-button">← Voltar</a>
+  <div class="container">
+    <div class="card">
+      <header>
+        <div>
+          <h1>Top 100 Phrasal Verbs</h1>
+          <div class="sub">Os phrasal verbs mais usados, com significado em inglês e tradução para o português.</div>
+        </div>
+      </header>
+
+      <div class="phrasal-verb-list" id="phrasal-verb-list">
+        <!-- Phrasal verbs will be loaded here by JavaScript -->
+      </div>
+
+      <footer>
+        Feito com ❤️ para aprimorar seu inglês.
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const phrasalVerbsData = [
+        { verb: "Back up", en: "To support; to create a copy of data.", pt: "Apoiar; fazer cópia de segurança." },
+        { verb: "Break down", en: "To stop functioning (machine); to become very upset.", pt: "Parar de funcionar (máquina); ficar muito chateado." },
+        { verb: "Break in", en: "To enter by force; to interrupt.", pt: "Invadir; interromper." },
+        { verb: "Break off", en: "To end abruptly or cause to end.", pt: "Interromper; Terminar." },
+        { verb: "Break out", en: "To escape from prison; to start suddenly (war, disease).", pt: "Escapar da prisão; começar de repente (guerra, doença)." },
+        { verb: "Break up", en: "To end a relationship.", pt: "Terminar um relacionamento." },
+        { verb: "Bring about", en: "To cause or make something happen.", pt: "Causar ou provocar algo." },
+        { verb: "Bring back", en: "To return something.", pt: "Trazer de volta." },
+        { verb: "Bring up", en: "To mention or introduce a topic; to raise children.", pt: "Mencionar ou introduzir um tópico; criar filhos." },
+        { verb: "Build up", en: "To increase or strengthen.", pt: "Aumentar ou fortalecer." },
+        { verb: "Call back", en: "To return a phone call.", pt: "Retornar uma ligação." },
+        { verb: "Call off", en: "To cancel something.", pt: "Cancelar algo." },
+        { verb: "Carry on", en: "To continue doing something.", pt: "Continuar fazendo algo." },
+        { verb: "Carry out", en: "To fulfill or perform (an order, a task).", pt: "Cumprir ou realizar (uma ordem, uma tarefa)." },
+        { verb: "Catch up", en: "To reach the same level or standard as someone else.", pt: "Alcançar o mesmo nível ou padrão de outra pessoa." },
+        { verb: "Check out", en: "To investigate or examine something; to pay and leave a hotel.", pt: "Verificar; Examinar; Fazer o check-out." },
+        { verb: "Cheer up", en: "To become happier.", pt: "Animar-se." },
+        { verb: "Clear up", en: "To become brighter (weather); to explain.", pt: "Melhorar (tempo); esclarecer." },
+        { verb: "Come across", en: "To find or discover something by chance.", pt: "Encontrar ou descobrir algo por acaso." },
+        { verb: "Come along", en: "To accompany; to make progress.", pt: "Acompanhar; progredir." },
+        { verb: "Come back", en: "To return.", pt: "Retornar." },
+        { verb: "Come in", en: "To enter.", pt: "Entrar." },
+        { verb: "Come off", en: "To succeed or to become detached.", pt: "Ter sucesso ou se soltar." },
+        { verb: "Come out", en: "To appear or be released.", pt: "Aparecer ou ser lançado." },
+        { verb: "Come over", en: "To visit someone's home.", pt: "Visitar a casa de alguém." },
+        { verb: "Come up", en: "To occur or arise unexpectedly.", pt: "Surgir." },
+        { verb: "Come up with", en: "To think of or suggest a plan or idea.", pt: "Pensar ou sugerir um plano ou ideia." },
+        { verb: "Come with", en: "To accompany.", pt: "Acompanhar." },
+        { verb: "Count on", en: "To rely on.", pt: "Contar com." },
+        { verb: "Cut down", en: "To reduce the amount of something (e.g., consumption).", pt: "Reduzir." },
+        { verb: "Cut down on", en: "To reduce the amount of something.", pt: "Reduzir a quantidade de algo." },
+        { verb: "Cut off", en: "To interrupt or disconnect.", pt: "Interromper ou desconectar." },
+        { verb: "Cut out", en: "To remove by cutting or cease an activity.", pt: "Cortar; Parar." },
+        { verb: "Deal with", en: "To handle or manage.", pt: "Lidar ou gerenciar." },
+        { verb: "Do without", en: "To manage successfully without something.", pt: "Conseguir sem algo." },
+        { verb: "Dress up", en: "To wear special clothes.", pt: "Vestir-se a rigor." },
+        { verb: "Drop off", en: "To leave something or someone at a place.", pt: "Deixar algo ou alguém em um lugar." },
+        { verb: "Drop out", en: "To leave school, an organization, or an activity.", pt: "Sair de uma escola, organização ou atividade." },
+        { verb: "Eat out", en: "To eat in a restaurant.", pt: "Comer fora." },
+        { verb: "End up", en: "To finally be in a particular place or situation.", pt: "Acabar em (um lugar/situação)." },
+        { verb: "Fall apart", en: "To break into pieces or fail completely.", pt: "Despedaçar-se ou falhar completamente." },
+        { verb: "Fall behind", en: "To fail to keep up.", pt: "Ficar para trás." },
+        { verb: "Figure out", en: "To understand or solve something.", pt: "Entender ou resolver algo." },
+        { verb: "Fill in", en: "To provide information or complete a form.", pt: "Preencher." },
+        { verb: "Find out", en: "To discover or learn something.", pt: "Descobrir ou aprender algo." },
+        { verb: "Get along", en: "To have a harmonious relationship or make progress.", pt: "Dar-se bem." },
+        { verb: "Get along with", en: "To have a good relationship with someone.", pt: "Ter um bom relacionamento com alguém." },
+        { verb: "Get around", en: "To move from place to place.", pt: "Mover-se de um lugar para outro." },
+        { verb: "Get away", en: "To escape.", pt: "Escapar." },
+        { verb: "Get back", en: "To return.", pt: "Retornar." },
+        { verb: "Get by", en: "To manage with difficulty.", pt: "Sobreviver com dificuldade." },
+        { verb: "Get in", en: "To enter a vehicle or arrive at a destination.", pt: "Entrar; Chegar." },
+        { verb: "Get off", en: "To leave a bus, train, etc.; to descend.", pt: "Sair (de ônibus, trem, etc.); descer." },
+        { verb: "Get on", en: "To enter a bus, train, etc.; to have a good relationship.", pt: "Entrar (em ônibus, trem, etc.); dar-se bem." },
+        { verb: "Get out", en: "To leave.", pt: "Sair." },
+        { verb: "Get rid of", en: "To discard or remove.", pt: "Descartar ou remover." },
+        { verb: "Get up", en: "To rise from bed or awake.", pt: "Levantar-se." },
+        { verb: "Give away", en: "To give something free of charge.", pt: "Dar algo gratuitamente." },
+        { verb: "Give back", en: "To return something.", pt: "Devolver algo." },
+        { verb: "Give in", en: "To surrender or yield.", pt: "Render-se ou ceder." },
+        { verb: "Give up", en: "To quit or surrender; to stop trying.", pt: "Desistir; parar de tentar." },
+        { verb: "Go ahead", en: "To proceed or give permission.", pt: "Prosseguir ou dar permissão." },
+        { verb: "Go back", en: "To return to a place or time.", pt: "Retornar a um lugar ou tempo." },
+        { verb: "Go off", en: "To spoil (food) or explode; to leave suddenly.", pt: "Estragar (comida) ou explodir; sair de repente." },
+        { verb: "Go on", en: "To continue or proceed.", pt: "Continuar." },
+        { verb: "Go over", en: "To review or examine.", pt: "Revisar ou examinar." },
+        { verb: "Grow up", en: "To become an adult.", pt: "Crescer." },
+        { verb: "Hand in", en: "To submit something.", pt: "Entregar algo." },
+        { verb: "Hand out", en: "To distribute.", pt: "Distribuir." },
+        { verb: "Hang out", en: "To spend time relaxing.", pt: "Passar tempo relaxando." },
+        { verb: "Hang up", en: "To end a phone call.", pt: "Desligar o telefone." },
+        { verb: "Hold back", en: "To restrain or refrain from doing something; to hide emotions.", pt: "Conter-se; esconder emoções." },
+        { verb: "Hold off", en: "To delay or defer an action.", pt: "Atrasar; Postergar." },
+        { verb: "Hold on", en: "To wait or cling to.", pt: "Esperar ou segurar." },
+        { verb: "Hold up", en: "To delay or impede progress; to rob.", pt: "Atrasar; Impedir; Assaltar." },
+        { verb: "Join in", en: "To participate.", pt: "Participar." },
+        { verb: "Keep on", en: "To continue doing something.", pt: "Continuar fazendo algo." },
+        { verb: "Keep up with", en: "To stay at the same level or pace.", pt: "Manter-se no mesmo nível ou ritmo." },
+        { verb: "Kick off", en: "To begin (an event).", pt: "Começar (um evento)." },
+        { verb: "Knock out", en: "To make unconscious; to eliminate from a competition.", pt: "Nocaute; eliminar de uma competição." },
+        { verb: "Leave out", en: "To omit.", pt: "Omitir." },
+        { verb: "Let down", en: "To disappoint.", pt: "Decepcionar." },
+        { verb: "Let in", en: "To allow to enter.", pt: "Permitir a entrada." },
+        { verb: "Look after", en: "To take care of someone or something.", pt: "Cuidar de alguém ou algo." },
+        { verb: "Look forward to", en: "To anticipate with pleasure.", pt: "Aguardar ansiosamente." },
+        { verb: "Look into", en: "To investigate.", pt: "Investigar." },
+        { verb: "Look out for", en: "To be vigilant or attentive to something.", pt: "Ficar atento; Cuidar." },
+        { verb: "Look up", en: "To search for information.", pt: "Pesquisar informações." },
+        { verb: "Look through", en: "To examine quickly; to read quickly.", pt: "Examinar rapidamente; ler rapidamente." },
+        { verb: "Make out", en: "To discern or understand something difficult to perceive.", pt: "Distinguir; Entender." },
+        { verb: "Make over", en: "To transform or renovate.", pt: "Reformar; transformar." },
+        { verb: "Make up", en: "To invent or create something; to reconcile.", pt: "Inventar ou criar algo; reconciliar." },
+        { verb: "Make up for", en: "To compensate for a deficiency or loss.", pt: "Compensar." },
+        { verb: "Move on", en: "To leave a place and go to another; to proceed to a new topic.", pt: "Mudar de lugar; prosseguir para um novo tópico." },
+        { verb: "Pass away", en: "To die.", pt: "Morrer." },
+        { verb: "Pass out", en: "To faint or distribute.", pt: "Desmaiar ou distribuir." },
+        { verb: "Pay back", en: "To repay money.", pt: "Pagar de volta (dinheiro)." },
+        { verb: "Pay off", en: "To yield a profit or advantage; to pay a debt completely.", pt: "Compensar; quitar uma dívida." },
+        { verb: "Pick up", en: "To lift or collect something; to learn quickly.", pt: "Levantar ou coletar algo; aprender rapidamente." },
+        { verb: "Point out", en: "To identify or draw attention to something.", pt: "Apontar; Destacar." },
+        { verb: "Pull over", en: "To move to the side of the road.", pt: "Parar no acostamento." },
+        { verb: "Put away", en: "To put something in its proper place.", pt: "Guardar algo no lugar certo." },
+        { verb: "Put back", en: "To return something to its original place.", pt: "Devolver algo ao seu lugar original." },
+        { verb: "Put down", en: "To write down; to criticize.", pt: "Anotar; criticar." },
+        { verb: "Put off", en: "To postpone or delay something.", pt: "Adiar ou postergar algo." },
+        { verb: "Put on", en: "To dress oneself in clothing or apply makeup.", pt: "Vestir; Aplicar." },
+        { verb: "Put out", en: "To extinguish (a fire); to inconvenience.", pt: "Apagar (um incêndio); incomodar." },
+        { verb: "Run away", en: "To escape by running.", pt: "Fugir correndo." },
+        { verb: "Run into", en: "To meet someone unexpectedly.", pt: "Encontrar alguém inesperadamente." },
+        { verb: "Run out", en: "To exhaust the supply of something.", pt: "Ficar sem." },
+        { verb: "Run out of", en: "To exhaust the supply of something.", pt: "Ficar sem." },
+        { verb: "Run over", en: "To hit with a vehicle; to review quickly.", pt: "Atropelar; revisar rapidamente." },
+        { verb: "Rule out", en: "To exclude.", pt: "Excluir; descartar." },
+        { verb: "Set off", en: "To begin a journey or trigger something.", pt: "Partir; Desencadear." },
+        { verb: "Set out", en: "To begin a journey or undertaking with a specific aim.", pt: "Partir; Iniciar." },
+        { verb: "Set up", en: "To establish or organize something.", pt: "Estabelecer ou organizar algo." },
+        { verb: "Show up", en: "To arrive or appear.", pt: "Aparecer ou chegar." },
+        { verb: "Sign off", en: "To give official approval; to end a communication.", pt: "Dar aprovação oficial; encerrar uma comunicação." },
+        { verb: "Sign up", en: "To register.", pt: "Inscrever-se." },
+        { verb: "Slow down", en: "To reduce speed.", pt: "Diminuir a velocidade." },
+        { verb: "Sort out", en: "To organize or resolve.", pt: "Organizar ou resolver." },
+        { verb: "Speak up", en: "To speak more loudly.", pt: "Falar mais alto." },
+        { verb: "Stand out", en: "To be very noticeable.", pt: "Destacar-se." },
+        { verb: "Take after", en: "To resemble a family member in appearance or behavior.", pt: "Assemelhar-se a um membro da família em aparência ou comportamento." },
+        { verb: "Take apart", en: "To separate into pieces.", pt: "Desmontar." },
+        { verb: "Take away", en: "To remove or subtract.", pt: "Remover ou subtrair." },
+        { verb: "Take down", en: "To write down or remove from a higher place.", pt: "Anotar ou remover de um lugar mais alto." },
+        { verb: "Take off", en: "To remove clothing or depart (plane).", pt: "Tirar (roupa); Decolar." },
+        { verb: "Take on", en: "To accept (a responsibility/task); to employ.", pt: "Aceitar (responsabilidade/tarefa); empregar." },
+        { verb: "Take out", en: "To remove; to go on a date.", pt: "Remover; sair em um encontro." },
+        { verb: "Take over", en: "To assume control or responsibility for something.", pt: "Assumir o controle." },
+        { verb: "Think back", en: "To remember something from the past.", pt: "Relembrar o passado." },
+        { verb: "Think over", en: "To consider carefully.", pt: "Considerar cuidadosamente." },
+        { verb: "Throw away", en: "To discard.", pt: "Descartar." },
+        { verb: "Try on", en: "To put on clothes to see if they fit.", pt: "Experimentar (roupas)." },
+        { verb: "Try out", en: "To test something to see if it works.", pt: "Testar algo para ver se funciona." },
+        { verb: "Turn around", en: "To rotate to face another direction.", pt: "Virar-se." },
+        { verb: "Turn away", en: "To refuse admission or reject someone or something.", pt: "Recusar; Afastar." },
+        { verb: "Turn down", en: "To reject or refuse something; to reduce volume/intensity.", pt: "Rejeitar ou recusar algo; diminuir volume/intensidade." },
+        { verb: "Turn into", en: "To transform into.", pt: "Transformar-se em." },
+        { verb: "Turn off", en: "To switch off (a light, machine, etc.).", pt: "Desligar (luz, máquina, etc.)." },
+        { verb: "Turn on", en: "To switch on (a light, machine, etc.).", pt: "Ligar (luz, máquina, etc.)." },
+        { verb: "Turn up", en: "To appear or arrive; to increase volume/intensity.", pt: "Aparecer ou chegar; aumentar volume/intensidade." },
+        { verb: "Wake up", en: "To stop sleeping or become alert.", pt: "Parar de dormir ou tornar-se alerta." },
+        { verb: "Wash up", en: "To wash dishes or oneself.", pt: "Lavar a louça ou a si mesmo." },
+        { verb: "Wear out", en: "To become unusable from long use; to make someone very tired.", pt: "Desgastar-se pelo uso; cansar muito alguém." },
+        { verb: "Work on", en: "To be engaged in; to try to improve.", pt: "Estar envolvido em; tentar melhorar." },
+        { verb: "Work out", en: "To exercise or resolve a problem.", pt: "Exercitar-se ou resolver um problema." },
+        { verb: "Ask out", en: "To invite someone on a date.", pt: "Convidar para sair (um encontro)." },
+        { verb: "Back out", en: "To withdraw from a commitment.", pt: "Voltar atrás; desistir." },
+        { verb: "Blow up", en: "To explode; to become very angry.", pt: "Explodir; ficar muito bravo." },
+        { verb: "Brush up on", en: "To improve an old skill or knowledge.", pt: "Refrescar (conhecimento/habilidade)." },
+        { verb: "Chip in", en: "To contribute money or help.", pt: "Contribuir com dinheiro ou ajuda." },
+        { verb: "Come apart", en: "To separate into pieces.", pt: "Separar-se em pedaços." },
+        { verb: "Cross out", en: "To draw a line through something to show it is wrong.", pt: "Riscar; tachar." },
+        { verb: "Do over", en: "To do again.", pt: "Fazer novamente." },
+        { verb: "Fill out", en: "To complete a form.", pt: "Preencher (um formulário)." },
+        { verb: "Grow apart", en: "To become less close over time (relationship).", pt: "Afastar-se (em um relacionamento)." }
+      ];
+
+      const phrasalVerbListContainer = document.getElementById('phrasal-verb-list');
+      let html = '';
+
+      phrasalVerbsData.forEach(item => {
+        html += `
+          <div class="phrasal-verb-item">
+            <div class="phrasal-verb">${item.verb}</div>
+            <div class="meaning-en">${item.en}</div>
+            <div class="meaning-pt">${item.pt}</div>
+          </div>
+        `;
+      });
+      phrasalVerbListContainer.innerHTML = html;
+    });
+  </script>
+</body>
+</html>

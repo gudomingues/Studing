@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guia de Inglês Definitivo: 800 Exercícios</title>
+  <title>Guia de Inglês - Passa tempo Interativo</title>
   <link rel="icon" href="https://web.dev/static/articles/building/an-adaptive-favicon/image/example-dark-theme-favico-6a6f6f67bc3e7_856.png?hl=pt-br">
   <style>
     :root{
@@ -60,6 +60,7 @@
           <h1>Estudando Inglês Interativo</h1>
           <div class="sub">Navegue pelas abas, pratique com exercícios aleatórios e reforce seu aprendizado.</div>
         </div>
+        <button class="btn primary" onclick="location.href='top_100_phrasal_verbs.html'">Top 100 Phrasal Verbs</button>
       </header>
 
       <nav class="tabs" id="tabs">
@@ -162,7 +163,7 @@
 
       let html = '';
       selectedExercises.forEach(ex => {
-        html += `<li class="exercise">${ex.q} <input data-key="${ex.k}" type="text"/></li>`;
+        html += `<li class="exercise">${ex.q} <input data-key="${ex.k}" type="text"/><span class="translation">${ex.t || ''}</span></li>`;
       });
       exerciseList.innerHTML = html;
 
