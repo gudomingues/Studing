@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guia de Inglês Definitivo: 800 Exercícios</title>
+  <link rel="icon" href="https://web.dev/static/articles/building/an-adaptive-favicon/image/example-dark-theme-favico-6a6f6f67bc3e7_856.png?hl=pt-br">
+  <style>
+    :root{
+      --bg: #0f172a; --panel: #111827; --panel-2: #0b1220; --text: #e5e7eb;
+      --muted: #9ca3af; --brand: #7c3aed; --brand-2: #a78bfa; --accent: #10b981;
+      --warning: #f59e0b; --error: #ef4444; --ok: #22c55e;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#0a1020 60%,#050812);
+      color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;}
+    .container{max-width:1100px;margin:40px auto;padding:0 16px}
+    .card{background: radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.2), transparent 60%),
+                     radial-gradient(800px 400px at 110% 10%, rgba(16,185,129,.12), transparent 60%),
+                     linear-gradient(180deg,var(--panel),var(--panel-2));
+      border:1px solid rgba(255,255,255,.06);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.45);
+      overflow:hidden}
+    header{padding:28px 22px;border-bottom:1px solid rgba(255,255,255,.06);
+      display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+    h1{font-size:clamp(22px,3.6vw,34px);margin:0;font-weight:800;letter-spacing:.2px}
+    .sub{color:var(--muted);font-size:14px}
+    .tabs{display:flex;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.06);background:rgba(0,0,0,.1)}
+    .tab{padding:14px 18px;cursor:pointer;user-select:none;transition:.2s;border-right:1px solid rgba(255,255,255,.06);
+         font-weight:600;color:#dbeafe; font-size: 13px;}
+    .tab:hover{background:rgba(124,58,237,.15)}
+    .tab.active{background:linear-gradient(180deg,rgba(124,58,237,.35),rgba(124,58,237,.18));color:white}
+    .panel{display:none;padding:22px 22px 28px}
+    .panel.active{display:block}
+    .hl{background:rgba(124,58,237,.18);border:1px dashed rgba(124,58,237,.6);border-radius:12px;padding:12px 14px;margin:14px 0}
+    .s{font-weight:700;color:#93c5fd}
+    .be{font-weight:700;color:#34d399}
+    .v{font-weight:700;color:#fca5a5}
+    .ing{font-weight:700;color:#fbbf24}
+    .kw{font-weight:700;color:var(--brand-2)}
+    .example{padding:10px 12px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.02); font-size: 14px; margin-top: 10px;}
+    .translation{display:block;color:var(--muted);font-size:12px;font-style:italic;margin-top:2px}
+    .exercise{margin:8px 0 16px;padding:12px 12px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:rgba(255,255,255,.02)}
+    .exercise input[type="text"]{width:220px;max-width:100%;padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.1);
+                                  background:rgba(255,255,255,.06);color:var(--text)}
+    .btn{padding:10px 14px;border:none;border-radius:12px;font-weight:700;cursor:pointer;margin:6px 6px 0 0}
+    .btn.primary{background:linear-gradient(180deg,var(--brand),#6d28d9);color:white}
+    .btn.ghost{background:rgba(255,255,255,.05);color:var(--text);border:1px solid rgba(255,255,255,.08)}
+    .msg{margin-top:8px;font-size:14px}
+    .ok{color:var(--ok)}
+    .err{color:var(--error)}
+    footer{padding:18px 22px;border-top:1px solid rgba(255,255,255,.06);color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header>
+        <div>
+          <h1>Estudando Inglês Interativo</h1>
+          <div class="sub">Navegue pelas abas, pratique com exercícios aleatórios e reforce seu aprendizado.</div>
+        </div>
+      </header>
+
+      <nav class="tabs" id="tabs">
+        <div class="tab active" data-target="aula1">1. Past of Be</div>
+        <div class="tab" data-target="aula2">2. Comparatives</div>
+        <div class="tab" data-target="aula3">3. Weather</div>
+        <div class="tab" data-target="aula4">4. Family</div>
+        <div class="tab" data-target="aula5">5. Whose</div>
+        <div class="tab" data-target="aula6">6. Possessives</div>
+        <div class="tab" data-target="aula7">7. Demonstratives</div>
+        <div class="tab" data-target="aula14">8. Simple Present</div>
+        <div class="tab" data-target="aula8">9. Simple Past</div>
+        <div class="tab" data-target="aula9">10. Future Tenses</div>
+        <div class="tab" data-target="aula10">11. Present Continuous</div>
+        <div class="tab" data-target="aula11">12. Past Continuous</div>
+        <div class="tab" data-target="aula12">13. Object Pronouns</div>
+        <div class="tab" data-target="aula13">14. Intensifiers</div>
+        <div class="tab" data-target="aula15">15. WH Questions</div>
+        <div class="tab" data-target="aula16">16. Phrasal Verbs</div>
+      </nav>
+
+      <div id="panels">
+        <section class="panel active" id="aula1">
+            <h2>1. Past of "Be" (was/were)</h2>
+            <div class="hl">Use <b class="be">was</b> para (<span class="s">I, he, she, it</span>) e <b class="be">were</b> para (<span class="s">you, we, they</span>).</div>
+            <ol class="exercise-list"></ol>
+            <button class="btn primary" onclick="check('aula1')">Verificar</button>
+            <button class="btn ghost" onclick="showKeys('aula1')">Mostrar Gabarito</button>
+            <button class="btn ghost" onclick="generateExercises('aula1')">Gerar Novos Exercícios</button>
+            <div class="msg" id="msg-aula1"></div>
+        </section>
+
+        <section class="panel" id="aula2">
+            <h2>2. Comparatives</h2>
+            <div class="hl">Adjetivo curto: <b class="kw">-er than</b>. Adjetivo longo: <b class="kw">more</b> + <span class="v">adj</span> + <b class="kw">than</b>. Irregulares: good → <b class="kw">better</b>.</div>
+            <ol class="exercise-list"></ol>
+            <button class="btn primary" onclick="check('aula2')">Verificar</button>
+            <button class="btn ghost" onclick="showKeys('aula2')">Mostrar Gabarito</button>
+            <button class="btn ghost" onclick="generateExercises('aula2')">Gerar Novos Exercícios</button>
+            <div class="msg" id="msg-aula2"></div>
+        </section>
+
+        <section class="panel" id="aula3"><h2>3. Weather</h2><div class="hl">Palavras comuns: <b class="kw">sunny, rainy, cloudy, windy, snowy, cold, hot.</b></div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula3')">Verificar</button><button class="btn ghost" onclick="showKeys('aula3')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula3')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula3"></div></section>
+        <section class="panel" id="aula4"><h2>4. Family Members</h2><div class="hl">Vocabulário: <b class="kw">father, mother, brother, sister, aunt, cousin, parents.</b></div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula4')">Verificar</button><button class="btn ghost" onclick="showKeys('aula4')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula4')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula4"></div></section>
+        <section class="panel" id="aula5"><h2>5. Whose</h2><div class="hl">"<b class="kw">Whose</b>" pergunta sobre posse ("de quem"). Ex.: <i>Whose book is this?</i></div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula5')">Verificar</button><button class="btn ghost" onclick="showKeys('aula5')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula5')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula5"></div></section>
+        <section class="panel" id="aula6"><h2>6. Possessive Adjectives</h2><div class="hl">Indicam posse antes de um substantivo: <b class="kw">my, your, his, her, its, our, their.</b></div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula6')">Verificar</button><button class="btn ghost" onclick="showKeys('aula6')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula6')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula6"></div></section>
+        <section class="panel" id="aula7"><h2>7. Demonstrative Pronouns</h2><div class="hl">Perto: <b class="kw">this</b> (singular), <b class="kw">these</b> (plural). Longe: <b class="kw">that</b> (singular), <b class="kw">those</b> (plural).</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula7')">Verificar</button><button class="btn ghost" onclick="showKeys('aula7')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula7')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula7"></div></section>
+        <section class="panel" id="aula14"><h2>8. Simple Present</h2><div class="hl">Usado para hábitos e fatos. Adicione <b class="v">-s</b> ou <b class="v">-es</b> ao verbo para <span class="s">he, she, it</span>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula14')">Verificar</button><button class="btn ghost" onclick="showKeys('aula14')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula14')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula14"></div></section>
+        <section class="panel" id="aula8"><h2>9. Simple Past</h2><div class="hl">Ações finalizadas. <b>Afirmativa:</b> <span class="v">Verbo no Passado</span>. <b>Negativa:</b> <b class="be">didn't</b> + <span class="v">Verbo (base)</span>. <b>Interrogativa:</b> <b class="be">Did</b> + <span class="s">S</span> + <span class="v">Verbo (base)</span>?</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula8')">Verificar</button><button class="btn ghost" onclick="showKeys('aula8')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula8')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula8"></div></section>
+        <section class="panel" id="aula9"><h2>10. Future Tenses (Will / Going to)</h2><div class="hl"><b class="kw">Going to</b> para planos. <b class="kw">Will</b> para decisões rápidas/previsões. Negativa: <b class="be">won't</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula9')">Verificar</button><button class="btn ghost" onclick="showKeys('aula9')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula9')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula9"></div></section>
+        <section class="panel" id="aula10"><h2>11. Present Continuous</h2><div class="hl">Ação acontecendo agora: <span class="s">S</span> + <b class="be">am/is/are</b> + <b class="v">verbo</b><b class="ing">-ING</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula10')">Verificar</button><button class="btn ghost" onclick="showKeys('aula10')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula10')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula10"></div></section>
+        <section class="panel" id="aula11"><h2>12. Past Continuous</h2><div class="hl">Ação em progresso no passado: <span class="s">S</span> + <b class="be">was/were</b> + <b class="v">verbo</b><b class="ing">-ING</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula11')">Verificar</button><button class="btn ghost" onclick="showKeys('aula11')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula11')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula11"></div></section>
+        <section class="panel" id="aula12"><h2>13. Object Pronouns</h2><div class="hl">Recebem a ação: <b class="kw">me, you, him, her, it, us, them</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula12')">Verificar</button><button class="btn ghost" onclick="showKeys('aula12')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula12')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula12"></div></section>
+        <section class="panel" id="aula13"><h2>14. Intensifiers</h2><div class="hl">Intensificam adjetivos: <b class="kw">very, really, so, too</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula13')">Verificar</button><button class="btn ghost" onclick="showKeys('aula13')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula13')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula13"></div></section>
+        <section class="panel" id="aula15"><h2>15. WH Questions</h2><div class="hl">Perguntas específicas: <b class="kw">What, When, Where, Who, Whose, Why, How</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula15')">Verificar</button><button class="btn ghost" onclick="showKeys('aula15')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula15')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula15"></div></section>
+        <section class="panel" id="aula16"><h2>16. Phrasal Verbs</h2><div class="hl">Combinação de um <b class="v">verbo</b> + <b class="kw">preposição/advérbio</b> que cria um novo significado.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula16')">Verificar</button><button class="btn ghost" onclick="showKeys('aula16')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula16')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula16"></div></section>
+      </div>
+      <footer>
+        Feito com ❤️ para prática de inglês. Clique nas abas e gere novos exercícios para aprender.
+      </footer>
+    </div>
+  </div>
+
+  <script type="module">
+    import { exerciseData } from './exercises.js';
+
+    const exercisesPerPage = 7;
+
+    // ... existing code ...
+
+    const allPanelIds = Array.from(document.querySelectorAll('.panel')).map(p => p.id);
+    allPanelIds.forEach(id => {
+      if (!exerciseData[id]) {
+        exerciseData[id] = Array.from({ length: 50 }, (_, i) => ({
+            q: `Exercício de amostra ${i + 1} para ${id}.`, k: 'resposta'
+        }));
+      }
+    });
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function generateExercises(panelId) {
+      const panel = document.getElementById(panelId);
+      if (!panel) return;
+      const exerciseList = panel.querySelector('.exercise-list');
+      const dataPool = exerciseData[panelId];
+
+      if (!exerciseList || !dataPool || dataPool.length === 0) {
+        exerciseList.innerHTML = '<li>Nenhum exercício disponível.</li>';
+        return;
+      }
+      
+      shuffleArray(dataPool);
+      const selectedExercises = dataPool.slice(0, exercisesPerPage);
+
+      let html = '';
+      selectedExercises.forEach(ex => {
+        html += `<li class="exercise">${ex.q} <input data-key="${ex.k}" type="text"/></li>`;
+      });
+      exerciseList.innerHTML = html;
+
+      const msg = document.getElementById('msg-' + panelId);
+      if (msg) msg.innerHTML = '';
+    }
+
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.panel');
+    tabs.forEach(t => t.addEventListener('click', () => {
+      tabs.forEach(x=>x.classList.remove('active'));
+      panels.forEach(p=>p.classList.remove('active'));
+      t.classList.add('active');
+      const targetPanel = document.getElementById(t.dataset.target);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+        generateExercises(t.dataset.target);
+      }
+    }));
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      generateExercises('aula1');
+    });
+
+    function norm(s){
+      return (s||'').toString().trim().toLowerCase().replace(/\s+/g,' ');
+    }
+
+    function check(panelId){
+      const panel = document.getElementById(panelId);
+      const inputs = panel.querySelectorAll('input[type="text"]');
+      let ok = 0;
+      inputs.forEach(inp=>{
+        const expected = inp.dataset.key.split('|').map(norm);
+        const val = norm(inp.value);
+        const match = expected.includes(val);
+        inp.style.outline = match ? '2px solid var(--ok)' : '2px solid var(--error)';
+        if(match) ok++;
+      });
+      const msg = document.getElementById('msg-'+panelId);
+      msg.innerHTML = ok === inputs.length
+        ? `<span class="ok">Perfeito! Você acertou ${ok}/${inputs.length}. ✨</span>`
+        : `<span class="err">Acertos: ${ok}/${inputs.length}. Tente corrigir os erros e verifique novamente.</span>`;
+    }
+
+    function showKeys(panelId){
+      const panel = document.getElementById(panelId);
+      const inputs = panel.querySelectorAll('input[type="text"]');
+      inputs.forEach(inp=>{ inp.value = inp.dataset.key.split('|')[0]; inp.style.outline='2px solid var(--warning)';});
+      const msg = document.getElementById('msg-'+panelId);
+      msg.innerHTML = '<span class="ok">Gabarito exibido. Limpe os campos para tentar de novo!</span>';
+    }
+  </script>
+</body>
+</html>
