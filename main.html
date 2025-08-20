@@ -86,9 +86,9 @@
             <h2>1. Past of "Be" (was/were)</h2>
             <div class="hl">Use <b class="be">was</b> para (<span class="s">I, he, she, it</span>) e <b class="be">were</b> para (<span class="s">you, we, they</span>).</div>
             <ol class="exercise-list"></ol>
-            <button class="btn primary" onclick="check('aula1')">Verificar</button>
-            <button class="btn ghost" onclick="showKeys('aula1')">Mostrar Gabarito</button>
-            <button class="btn ghost" onclick="generateExercises('aula1')">Gerar Novos Exercícios</button>
+            <button class="btn primary" id="check-aula1">Verificar</button>
+            <button class="btn ghost" id="showKeys-aula1">Mostrar Gabarito</button>
+            <button class="btn ghost" id="generateExercises-aula1">Gerar Novos Exercícios</button>
             <div class="msg" id="msg-aula1"></div>
         </section>
 
@@ -96,26 +96,26 @@
             <h2>2. Comparatives</h2>
             <div class="hl">Adjetivo curto: <b class="kw">-er than</b>. Adjetivo longo: <b class="kw">more</b> + <span class="v">adj</span> + <b class="kw">than</b>. Irregulares: good → <b class="kw">better</b>.</div>
             <ol class="exercise-list"></ol>
-            <button class="btn primary" onclick="check('aula2')">Verificar</button>
-            <button class="btn ghost" onclick="showKeys('aula2')">Mostrar Gabarito</button>
-            <button class="btn ghost" onclick="generateExercises('aula2')">Gerar Novos Exercícios</button>
+            <button class="btn primary" id="check-aula2">Verificar</button>
+            <button class="btn ghost" id="showKeys-aula2">Mostrar Gabarito</button>
+            <button class="btn ghost" id="generateExercises-aula2">Gerar Novos Exercícios</button>
             <div class="msg" id="msg-aula2"></div>
         </section>
 
-        <section class="panel" id="aula3"><h2>3. Weather</h2><div class="hl">Palavras comuns: <b class="kw">sunny, rainy, cloudy, windy, snowy, cold, hot.</b></div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula3')">Verificar</button><button class="btn ghost" onclick="showKeys('aula3')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula3')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula3"></div></section>
-        <section class="panel" id="aula4"><h2>4. Family Members</h2><div class="hl">Vocabulário: <b class="kw">father, mother, brother, sister, aunt, cousin, parents.</b></div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula4')">Verificar</button><button class="btn ghost" onclick="showKeys('aula4')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula4')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula4"></div></section>
-        <section class="panel" id="aula5"><h2>5. Whose</h2><div class="hl">"<b class="kw">Whose</b>" pergunta sobre posse ("de quem"). Ex.: <i>Whose book is this?</i></div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula5')">Verificar</button><button class="btn ghost" onclick="showKeys('aula5')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula5')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula5"></div></section>
-        <section class="panel" id="aula6"><h2>6. Possessive Adjectives</h2><div class="hl">Indicam posse antes de um substantivo: <b class="kw">my, your, his, her, its, our, their.</b></div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula6')">Verificar</button><button class="btn ghost" onclick="showKeys('aula6')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula6')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula6"></div></section>
-        <section class="panel" id="aula7"><h2>7. Demonstrative Pronouns</h2><div class="hl">Perto: <b class="kw">this</b> (singular), <b class="kw">these</b> (plural). Longe: <b class="kw">that</b> (singular), <b class="kw">those</b> (plural).</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula7')">Verificar</button><button class="btn ghost" onclick="showKeys('aula7')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula7')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula7"></div></section>
-        <section class="panel" id="aula14"><h2>8. Simple Present</h2><div class="hl">Usado para hábitos e fatos. Adicione <b class="v">-s</b> ou <b class="v">-es</b> ao verbo para <span class="s">he, she, it</span>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula14')">Verificar</button><button class="btn ghost" onclick="showKeys('aula14')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula14')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula14"></div></section>
-        <section class="panel" id="aula8"><h2>9. Simple Past</h2><div class="hl">Ações finalizadas. <b>Afirmativa:</b> <span class="v">Verbo no Passado</span>. <b>Negativa:</b> <b class="be">didn't</b> + <span class="v">Verbo (base)</span>. <b>Interrogativa:</b> <b class="be">Did</b> + <span class="s">S</span> + <span class="v">Verbo (base)</span>?</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula8')">Verificar</button><button class="btn ghost" onclick="showKeys('aula8')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula8')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula8"></div></section>
-        <section class="panel" id="aula9"><h2>10. Future Tenses (Will / Going to)</h2><div class="hl"><b class="kw">Going to</b> para planos. <b class="kw">Will</b> para decisões rápidas/previsões. Negativa: <b class="be">won't</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula9')">Verificar</button><button class="btn ghost" onclick="showKeys('aula9')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula9')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula9"></div></section>
-        <section class="panel" id="aula10"><h2>11. Present Continuous</h2><div class="hl">Ação acontecendo agora: <span class="s">S</span> + <b class="be">am/is/are</b> + <b class="v">verbo</b><b class="ing">-ING</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula10')">Verificar</button><button class="btn ghost" onclick="showKeys('aula10')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula10')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula10"></div></section>
-        <section class="panel" id="aula11"><h2>12. Past Continuous</h2><div class="hl">Ação em progresso no passado: <span class="s">S</span> + <b class="be">was/were</b> + <b class="v">verbo</b><b class="ing">-ING</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula11')">Verificar</button><button class="btn ghost" onclick="showKeys('aula11')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula11')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula11"></div></section>
-        <section class="panel" id="aula12"><h2>13. Object Pronouns</h2><div class="hl">Recebem a ação: <b class="kw">me, you, him, her, it, us, them</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula12')">Verificar</button><button class="btn ghost" onclick="showKeys('aula12')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula12')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula12"></div></section>
-        <section class="panel" id="aula13"><h2>14. Intensifiers</h2><div class="hl">Intensificam adjetivos: <b class="kw">very, really, so, too</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula13')">Verificar</button><button class="btn ghost" onclick="showKeys('aula13')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula13')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula13"></div></section>
-        <section class="panel" id="aula15"><h2>15. WH Questions</h2><div class="hl">Perguntas específicas: <b class="kw">What, When, Where, Who, Whose, Why, How</b>.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula15')">Verificar</button><button class="btn ghost" onclick="showKeys('aula15')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula15')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula15"></div></section>
-        <section class="panel" id="aula16"><h2>16. Phrasal Verbs</h2><div class="hl">Combinação de um <b class="v">verbo</b> + <b class="kw">preposição/advérbio</b> que cria um novo significado.</div><ol class="exercise-list"></ol><button class="btn primary" onclick="check('aula16')">Verificar</button><button class="btn ghost" onclick="showKeys('aula16')">Mostrar Gabarito</button><button class="btn ghost" onclick="generateExercises('aula16')">Gerar Novos Exercícios</button><div class="msg" id="msg-aula16"></div></section>
+        <section class="panel" id="aula3"><h2>3. Weather</h2><div class="hl">Palavras comuns: <b class="kw">sunny, rainy, cloudy, windy, snowy, cold, hot.</b></div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula3">Verificar</button><button class="btn ghost" id="showKeys-aula3">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula3">Gerar Novos Exercícios</button><div class="msg" id="msg-aula3"></div></section>
+        <section class="panel" id="aula4"><h2>4. Family Members</h2><div class="hl">Vocabulário: <b class="kw">father, mother, brother, sister, aunt, cousin, parents.</b></div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula4">Verificar</button><button class="btn ghost" id="showKeys-aula4">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula4">Gerar Novos Exercícios</button><div class="msg" id="msg-aula4"></div></section>
+        <section class="panel" id="aula5"><h2>5. Whose</h2><div class="hl">"<b class="kw">Whose</b>" pergunta sobre posse ("de quem"). Ex.: <i>Whose book is this?</i></div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula5">Verificar</button><button class="btn ghost" id="showKeys-aula5">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula5">Gerar Novos Exercícios</button><div class="msg" id="msg-aula5"></div></section>
+        <section class="panel" id="aula6"><h2>6. Possessive Adjectives</h2><div class="hl">Indicam posse antes de um substantivo: <b class="kw">my, your, his, her, its, our, their.</b></div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula6">Verificar</button><button class="btn ghost" id="showKeys-aula6">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula6">Gerar Novos Exercícios</button><div class="msg" id="msg-aula6"></div></section>
+        <section class="panel" id="aula7"><h2>7. Demonstrative Pronouns</h2><div class="hl">Perto: <b class="kw">this</b> (singular), <b class="kw">these</b> (plural). Longe: <b class="kw">that</b> (singular), <b class="kw">those</b> (plural).</div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula7">Verificar</button><button class="btn ghost" id="showKeys-aula7">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula7">Gerar Novos Exercícios</button><div class="msg" id="msg-aula7"></div></section>
+        <section class="panel" id="aula14"><h2>8. Simple Present</h2><div class="hl">Usado para hábitos e fatos. Adicione <b class="v">-s</b> ou <b class="v">-es</b> ao verbo para <span class="s">he, she, it</span>.</div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula14">Verificar</button><button class="btn ghost" id="showKeys-aula14">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula14">Gerar Novos Exercícios</button><div class="msg" id="msg-aula14"></div></section>
+        <section class="panel" id="aula8"><h2>9. Simple Past</h2><div class="hl">Ações finalizadas. <b>Afirmativa:</b> <span class="v">Verbo no Passado</span>. <b>Negativa:</b> <b class="be">didn't</b> + <span class="v">Verbo (base)</span>. <b>Interrogativa:</b> <b class="be">Did</b> + <span class="s">S</span> + <span class="v">Verbo (base)</span>?</div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula8">Verificar</button><button class="btn ghost" id="showKeys-aula8">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula8">Gerar Novos Exercícios</button><div class="msg" id="msg-aula8"></div></section>
+        <section class="panel" id="aula9"><h2>10. Future Tenses (Will / Going to)</h2><div class="hl"><b class="kw">Going to</b> para planos. <b class="kw">Will</b> para decisões rápidas/previsões. Negativa: <b class="be">won't</b>.</div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula9">Verificar</button><button class="btn ghost" id="showKeys-aula9">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula9">Gerar Novos Exercícios</button><div class="msg" id="msg-aula9"></div></section>
+        <section class="panel" id="aula10"><h2>11. Present Continuous</h2><div class="hl">Ação acontecendo agora: <span class="s">S</span> + <b class="be">am/is/are</b> + <b class="v">verbo</b><b class="ing">-ING</b>.</div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula10">Verificar</button><button class="btn ghost" id="showKeys-aula10">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula10">Gerar Novos Exercícios</button><div class="msg" id="msg-aula10"></div></section>
+        <section class="panel" id="aula11"><h2>12. Past Continuous</h2><div class="hl">Ação em progresso no passado: <span class="s">S</span> + <b class="be">was/were</b> + <b class="v">verbo</b><b class="ing">-ING</b>.</div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula11">Verificar</button><button class="btn ghost" id="showKeys-aula11">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula11">Gerar Novos Exercícios</button><div class="msg" id="msg-aula11"></div></section>
+        <section class="panel" id="aula12"><h2>13. Object Pronouns</h2><div class="hl">Recebem a ação: <b class="kw">me, you, him, her, it, us, them</b>.</div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula12">Verificar</button><button class="btn ghost" id="showKeys-aula12">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula12">Gerar Novos Exercícios</button><div class="msg" id="msg-aula12"></div></section>
+        <section class="panel" id="aula13"><h2>14. Intensifiers</h2><div class="hl">Intensificam adjetivos: <b class="kw">very, really, so, too</b>.</div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula13">Verificar</button><button class="btn ghost" id="showKeys-aula13">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula13">Gerar Novos Exercícios</button><div class="msg" id="msg-aula13"></div></section>
+        <section class="panel" id="aula15"><h2>15. WH Questions</h2><div class="hl">Perguntas específicas: <b class="kw">What, When, Where, Who, Whose, Why, How</b>.</div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula15">Verificar</button><button class="btn ghost" id="showKeys-aula15">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula15">Gerar Novos Exercícios</button><div class="msg" id="msg-aula15"></div></section>
+        <section class="panel" id="aula16"><h2>16. Phrasal Verbs</h2><div class="hl">Combinação de um <b class="v">verbo</b> + <b class="kw">preposição/advérbio</b> que cria um novo significado.</div><ol class="exercise-list"></ol><button class="btn primary" id="check-aula16">Verificar</button><button class="btn ghost" id="showKeys-aula16">Mostrar Gabarito</button><button class="btn ghost" id="generateExercises-aula16">Gerar Novos Exercícios</button><div class="msg" id="msg-aula16"></div></section>
       </div>
       <footer>
         Feito com ❤️ para prática de inglês. Clique nas abas e gere novos exercícios para aprender.
@@ -183,10 +183,6 @@
       }
     }));
     
-    document.addEventListener('DOMContentLoaded', () => {
-      generateExercises('aula1');
-    });
-
     function norm(s){
       return (s||'').toString().trim().toLowerCase().replace(/\s+/g,' ');
     }
@@ -215,6 +211,25 @@
       const msg = document.getElementById('msg-'+panelId);
       msg.innerHTML = '<span class="ok">Gabarito exibido. Limpe os campos para tentar de novo!</span>';
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      allPanelIds.forEach(panelId => {
+        const checkButton = document.getElementById(`check-${panelId}`);
+        const showKeysButton = document.getElementById(`showKeys-${panelId}`);
+        const generateExercisesButton = document.getElementById(`generateExercises-${panelId}`);
+
+        if (checkButton) {
+          checkButton.addEventListener('click', () => check(panelId));
+        }
+        if (showKeysButton) {
+          showKeysButton.addEventListener('click', () => showKeys(panelId));
+        }
+        if (generateExercisesButton) {
+          generateExercisesButton.addEventListener('click', () => generateExercises(panelId));
+        }
+      });
+      generateExercises('aula1');
+    });
   </script>
 </body>
 </html>
