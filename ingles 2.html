@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guia Completo de Inglês: Teoria e Prática</title>
+  <style>
+    :root{
+      --bg: #0f172a; --panel: #111827; --panel-2: #0b1220; --text: #e5e7eb;
+      --muted: #9ca3af; --brand: #7c3aed; --brand-2: #a78bfa; --accent: #10b981;
+      --warning: #f59e0b; --error: #ef4444; --ok: #22c55e;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#0a1020 60%,#050812);
+      color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;}
+    .container{max-width:1100px;margin:40px auto;padding:0 16px}
+    .card{background: radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.2), transparent 60%),
+                     radial-gradient(800px 400px at 110% 10%, rgba(16,185,129,.12), transparent 60%),
+                     linear-gradient(180deg,var(--panel),var(--panel-2));
+      border:1px solid rgba(255,255,255,.06);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.45);
+      overflow:hidden}
+    header{padding:28px 22px;border-bottom:1px solid rgba(255,255,255,.06);
+      display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+    h1{font-size:clamp(22px,3.6vw,34px);margin:0;font-weight:800;letter-spacing:.2px}
+    .sub{color:var(--muted);font-size:14px}
+    .tabs{display:flex;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.06);background:rgba(0,0,0,.1)}
+    .tab{padding:14px 18px;cursor:pointer;user-select:none;transition:.2s;border-right:1px solid rgba(255,255,255,.06);
+         font-weight:600;color:#dbeafe; font-size: 13px;}
+    .tab:hover{background:rgba(124,58,237,.15)}
+    .tab.active{background:linear-gradient(180deg,rgba(124,58,237,.35),rgba(124,58,237,.18));color:white}
+    .panel{display:none;padding:22px 22px 28px}
+    .panel.active{display:block}
+    .hl{background:rgba(124,58,237,.18);border:1px dashed rgba(124,58,237,.6);border-radius:12px;padding:12px 14px;margin:14px 0}
+    .s{font-weight:700;color:#93c5fd}
+    .be{font-weight:700;color:#34d399}
+    .v{font-weight:700;color:#fca5a5}
+    .ing{font-weight:700;color:#fbbf24}
+    .kw{font-weight:700;color:var(--brand-2)} /* NOVA CLASSE PARA PALAVRAS-CHAVE */
+    .example{padding:10px 12px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.02); font-size: 14px; margin-top: 10px;}
+    .translation{display:block;color:var(--muted);font-size:12px;font-style:italic;margin-top:2px}
+    .exercise{margin:8px 0 16px;padding:12px 12px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:rgba(255,255,255,.02)}
+    .exercise input[type="text"]{width:220px;max-width:100%;padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.1);
+                                  background:rgba(255,255,255,.06);color:var(--text)}
+    .btn{padding:10px 14px;border:none;border-radius:12px;font-weight:700;cursor:pointer;margin:6px 6px 0 0}
+    .btn.primary{background:linear-gradient(180deg,var(--brand),#6d28d9);color:white}
+    .btn.ghost{background:rgba(255,255,255,.05);color:var(--text);border:1px solid rgba(255,255,255,.08)}
+    .msg{margin-top:8px;font-size:14px}
+    .ok{color:var(--ok)}
+    .err{color:var(--error)}
+    footer{padding:18px 22px;border-top:1px solid rgba(255,255,255,.06);color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header>
+        <div>
+          <h1>Guia Completo de Inglês</h1>
+          <div class="sub">Navegue pelas abas para teoria, exemplos com tradução e exercícios interativos.</div>
+        </div>
+      </header>
+
+      <nav class="tabs" id="tabs">
+        <div class="tab active" data-target="aula1">1. Past of Be</div>
+        <div class="tab" data-target="aula2">2. Comparatives</div>
+        <div class="tab" data-target="aula3">3. Weather</div>
+        <div class="tab" data-target="aula4">4. Family</div>
+        <div class="tab" data-target="aula5">5. Whose</div>
+        <div class="tab" data-target="aula6">6. Possessives</div>
+        <div class="tab" data-target="aula7">7. Demonstratives</div>
+        <div class="tab" data-target="aula14">8. Simple Present</div>
+        <div class="tab" data-target="aula8">9. Simple Past</div>
+        <div class="tab" data-target="aula9">10. Future Tenses</div>
+        <div class="tab" data-target="aula10">11. Present Continuous</div>
+        <div class="tab" data-target="aula11">12. Past Continuous</div>
+        <div class="tab" data-target="aula12">13. Object Pronouns</div>
+        <div class="tab" data-target="aula13">14. Intensifiers</div>
+        <div class="tab" data-target="aula15">15. WH Questions</div>
+        <div class="tab" data-target="aula16">16. Phrasal Verbs</div>
+      </nav>
+
+      <div id="panels">
+        <section class="panel active" id="aula1">
+          <h2>1. Past of "Be" (was/were)</h2>
+          <div class="hl">Use <b class="be">was</b> para (<span class="s">I, he, she, it</span>) e <b class="be">were</b> para (<span class="s">you, we, they</span>).</div>
+          <div class="example">
+            <span class="s">She</span> <b class="be">was</b> at home yesterday. <small class="translation">(Ela estava em casa ontem.)</small><br>
+            <span class="s">They</span> <b class="be">were</b> happy at the party. <small class="translation">(Eles estavam felizes na festa.)</small>
+          </div>
+          <ol>
+            <li class="exercise"><span class="s">She</span> ___ at home yesterday. <input data-key="was" type="text"/></li>
+            <li class="exercise"><span class="s">We</span> ___ in Brazil last year. <input data-key="were" type="text"/></li>
+            <li class="exercise"><span class="s">I</span> ___ tired this morning. <input data-key="was" type="text"/></li>
+            <li class="exercise"><span class="s">They</span> ___ happy at the party. <input data-key="were" type="text"/></li>
+            <li class="exercise">The <span class="s">cat</span> ___ sleeping on the chair. <input data-key="was" type="text"/></li>
+          </ol>
+          <button class="btn primary" onclick="check('aula1')">Verificar</button>
+          <button class="btn ghost" onclick="showKeys('aula1')">Mostrar Gabarito</button>
+          <div class="msg" id="msg-aula1"></div>
+        </section>
+
+        <section class="panel" id="aula2">
+          <h2>2. Comparatives</h2>
+          <div class="hl">Adjetivo curto: <b class="kw">-er than</b>. Adjetivo longo: <b class="kw">more</b> + <span class="v">adj</span> + <b class="kw">than</b>. Irregulares: good → <b class="kw">better</b>.</div>
+          <div class="example">
+            My car is <b class="kw">faster than</b> yours. <small class="translation">(Meu carro é mais rápido que o seu.)</small><br>
+            This book is <b class="kw">more interesting than</b> that one. <small class="translation">(Este livro é mais interessante que aquele.)</small>
+          </div>
+          <ol>
+            <li class="exercise">My car is ______ (fast) than yours. <input data-key="faster" type="text"/></li>
+            <li class="exercise">This watch is ______ (expensive) than the other one. <input data-key="more expensive" type="text"/></li>
+            <li class="exercise">The weather today is ______ (good) than yesterday. <input data-key="better" type="text"/></li>
+            <li class="exercise">He is ______ (tall) than his brother. <input data-key="taller" type="text"/></li>
+            <li class="exercise">This movie is ______ (interesting) than that one. <input data-key="more interesting" type="text"/></li>
+          </ol>
+          <button class="btn primary" onclick="check('aula2')">Verificar</button>
+          <button class="btn ghost" onclick="showKeys('aula2')">Mostrar Gabarito</button>
+          <div class="msg" id="msg-aula2"></div>
+        </section>
+        
+        <section class="panel" id="aula7">
+          <h2>7. Demonstrative Pronouns</h2>
+          <div class="hl">Perto: <b class="kw">this</b> (singular), <b class="kw">these</b> (plural). Longe: <b class="kw">that</b> (singular), <b class="kw">those</b> (plural).</div>
+          <div class="example">
+            I like <b class="kw">this</b> car. <small class="translation">(Eu gosto deste carro.)</small><br>
+            Look at <b class="kw">those</b> birds! <small class="translation">(Olhe para aqueles pássaros!)</small>
+          </div>
+          <ol>
+            <li class="exercise">______ (this) is my favorite song! (tocando agora) <input data-key="this" type="text"/></li>
+            <li class="exercise">Look at ______ (those) birds in the sky! (longe) <input data-key="those" type="text"/></li>
+            <li class="exercise">Can you see ______ (that) house on the hill? (longe) <input data-key="that" type="text"/></li>
+            <li class="exercise">Are ______ (these) your books here on the table? (perto) <input data-key="these" type="text"/></li>
+            <li class="exercise">Please, take ______ (this) folder. (entregando na mão) <input data-key="this" type="text"/></li>
+          </ol>
+          <button class="btn primary" onclick="check('aula7')">Verificar</button>
+          <button class="btn ghost" onclick="showKeys('aula7')">Mostrar Gabarito</button>
+          <div class="msg" id="msg-aula7"></div>
+        </section>
+
+        <section class="panel" id="aula14">
+          <h2>8. Simple Present</h2>
+          <div class="hl">Usado para hábitos, rotinas e fatos. Adicione <b class="v">-s</b> ou <b class="v">-es</b> ao verbo para <span class="s">he, she, it</span>.</div>
+          <div class="example">
+            <span class="s">I</span> <b class="v">work</b> here. <small class="translation">(Eu trabalho aqui.)</small><br>
+            <span class="s">She</span> <b class="v">works</b> here. <small class="translation">(Ela trabalha aqui.)</small><br>
+            The <span class="s">Earth</span> <b class="v">orbits</b> the sun. <small class="translation">(A Terra orbita o sol.)</small>
+          </div>
+          <ol>
+            <li class="exercise">Look! The <span class="s">sun</span> ______ (shine) brightly in the sky. <input data-key="shines" type="text"/></li>
+            <li class="exercise"><span class="s">Sarah</span> ______ (go) to the gym every morning. <input data-key="goes" type="text"/></li>
+            <li class="exercise"><span class="s">Water</span> ______ (boil) at 100 degrees Celsius. <input data-key="boils" type="text"/></li>
+            <li class="exercise">The <span class="s">children</span> ______ (play) happily in the park. <input data-key="play" type="text"/></li>
+            <li class="exercise">My <span class="s">parents</span> ______ (watch) TV in the living room. <input data-key="watch" type="text"/></li>
+          </ol>
+          <button class="btn primary" onclick="check('aula14')">Verificar</button>
+          <button class="btn ghost" onclick="showKeys('aula14')">Mostrar Gabarito</button>
+          <div class="msg" id="msg-aula14"></div>
+        </section>
+
+        <section class="panel" id="aula8">
+          <h2>9. Simple Past</h2>
+          <div class="hl">
+            Ações finalizadas no passado.
+            <ul>
+              <li><b>Afirmativa:</b> <span class="s">S</span> + <span class="v">Verbo no Passado (-ed ou irregular)</span>.</li>
+              <li><b>Negativa:</b> <span class="s">S</span> + <b class="be">didn't</b> + <span class="v">Verbo (base)</span>.</li>
+              <li><b>Interrogativa:</b> <b class="be">Did</b> + <span class="s">S</span> + <span class="v">Verbo (base)</span>?</li>
+            </ul>
+          </div>
+          <div class="example">
+            <span class="s">She</span> <b class="v">played</b> the piano. <small class="translation">(Ela tocou piano.)</small><br>
+            <span class="s">She</span> <b class="be">didn't play</b> the piano. <small class="translation">(Ela não tocou piano.)</small><br>
+            <b class="be">Did</b> <span class="s">she</span> <b class="v">play</b> the piano? <small class="translation">(Ela tocou piano?)</small>
+          </div>
+          <ol>
+            <li class="exercise">(Afirmativa) <span class="s">I</span> ______ (visit) my grandparents last week. <input data-key="visited" type="text"/></li>
+            <li class="exercise">(Afirmativa) <span class="s">They</span> ______ (go) to the cinema yesterday. <input data-key="went" type="text"/></li>
+            <li class="exercise">(Negativa) <span class="s">He</span> ______ (not eat) pizza last night. <input data-key="didn't eat" type="text"/></li>
+            <li class="exercise">(Interrogativa) ______ <span class="s">you</span> ______ (see) the movie? <input data-key="Did see" type="text"/></li>
+            <li class="exercise">(Negativa) <span class="s">We</span> ______ (not buy) a new car. <input data-key="didn't buy" type="text"/></li>
+          </ol>
+          <button class="btn primary" onclick="check('aula8')">Verificar</button>
+          <button class="btn ghost" onclick="showKeys('aula8')">Mostrar Gabarito</button>
+          <div class="msg" id="msg-aula8"></div>
+        </section>
+
+        <section class="panel" id="aula9">
+          <h2>10. Future Tenses (Will / Going to)</h2>
+          <div class="hl">
+            <b class="kw">Going to</b> para planos. <b class="kw">Will</b> para decisões rápidas e previsões.
+            <ul>
+                <li><b>Afirmativa:</b> <span class="s">S</span> + <b class="be">will</b> + <span class="v">Verbo (base)</span>.</li>
+                <li><b>Negativa:</b> <span class="s">S</span> + <b class="be">will not (won't)</b> + <span class="v">Verbo (base)</span>.</li>
+            </ul>
+          </div>
+          <div class="example">
+            <span class="s">I</span> <b class="be">am going to</b> <b class="v">travel</b>. <small class="translation">(Eu vou viajar - é um plano.)</small><br>
+            <span class="s">She</span> <b class="be">will not (won't) come</b> to the party. <small class="translation">(Ela não virá para a festa.)</small>
+          </div>
+          <ol>
+            <li class="exercise">(Plano) <span class="s">We</span> ______ (are going to) visit our family next Sunday. <input data-key="are going to" type="text"/></li>
+            <li class="exercise">(Decisão) The phone is ringing. <span class="s">I</span> ______ (will) get it! <input data-key="will" type="text"/></li>
+            <li class="exercise">(Negativa) <span class="s">He</span> ______ help you with the project. <input data-key="will not|won't" type="text"/></li>
+            <li class="exercise">(Negativa) <span class="s">They</span> ______ travel abroad next year. <input data-key="won't|will not" type="text"/></li>
+            <li class="exercise">(Previsão) <span class="s">I</span> think it ______ (will) rain later. <input data-key="will" type="text"/></li>
+          </ol>
+          <button class="btn primary" onclick="check('aula9')">Verificar</button>
+          <button class="btn ghost" onclick="showKeys('aula9')">Mostrar Gabarito</button>
+          <div class="msg" id="msg-aula9"></div>
+        </section>
+
+        <section class="panel" id="aula10">
+          <h2>11. Present Continuous</h2>
+          <div class="hl">Ação acontecendo agora: <span class="s">S</span> + <b class="be">am/is/are</b> + <b class="v">verbo</b><b class="ing">-ING</b>.</div>
+          <div class="example">
+            <span class="s">She</span> <b class="be">is</b> <b class="v">work<span class="ing">ing</span></b> now. <small class="translation">(Ela está trabalhando agora.)</small><br>
+            <span class="s">I</span> <b class="be">am</b> <b class="v">writ<span class="ing">ing</span></b> this lesson. <small class="translation">(Eu estou escrevendo esta lição.)</small>
+          </div>
+          <ol>
+            <li class="exercise">(Present) Look! <span class="s">He</span> ______ (is reading) a book in the park. <input data-key="is reading" type="text"/></li>
+            <li class="exercise">(Present) The <span class="s">children</span> ______ (are playing) football at the moment. <input data-key="are playing" type="text"/></li>
+            <li class="exercise">(Present) I can't talk now, <span class="s">I</span> ______ (am studying) for my test. <input data-key="am studying" type="text"/></li>
+            <li class="exercise">(Present) My <span class="s">father</span> ______ (is working) in the garden right now. <input data-key="is working" type="text"/></li>
+            <li class="exercise">(Present) <span class="s">We</span> ______ (are watching) a movie on TV. <input data-key="are watching" type="text"/></li>
+          </ol>
+          <button class="btn primary" onclick="check('aula10')">Verificar</button>
+          <button class="btn ghost" onclick="showKeys('aula10')">Mostrar Gabarito</button>
+          <div class="msg" id="msg-aula10"></div>
+        </section>
+
+        <section class="panel" id="aula11">
+          <h2>12. Past Continuous</h2>
+          <div class="hl">Ação em progresso no passado: <span class="s">S</span> + <b class="be">was/were</b> + <b class="v">verbo</b><b class="ing">-ING</b>.</div>
+          <div class="example">
+            <span class="s">I</span> <b class="be">was</b> <b class="v">sleep<span class="ing">ing</span></b> when you called. <small class="translation">(Eu estava dormindo quando você ligou.)</small><br>
+            <span class="s">They</span> <b class="be">were</b> <b class="v">play<span class="ing">ing</span></b> at 5 pm. <small class="translation">(Eles estavam jogando às 17h.)</small>
+          </div>
+          <ol>
+            <li class="exercise">(Past) <span class="s">I</span> ______ (was sleeping) when you called me last night. <input data-key="was sleeping" type="text"/></li>
+            <li class="exercise">(Past) <span class="s">He</span> ______ (was watching) TV when the power went out. <input data-key="was watching" type="text"/></li>
+            <li class="exercise">(Past) <span class="s">They</span> ______ (were studying) for the test all evening yesterday. <input data-key="were studying" type="text"/></li>
+            <li class="exercise">(Past) <span class="s">It</span> ______ (was raining) when I left the house this morning. <input data-key="was raining" type="text"/></li>
+            <li class="exercise">(Past) <span class="s">We</span> ______ (were walking) in the park when we saw them. <input data-key="were walking" type="text"/></li>
+          </ol>
+          <button class="btn primary" onclick="check('aula11')">Verificar</button>
+          <button class="btn ghost" onclick="showKeys('aula11')">Mostrar Gabarito</button>
+          <div class="msg" id="msg-aula11"></div>
+        </section>
+        
+        <section class="panel" id="aula15">
+          <h2>15. WH Questions</h2>
+          <div class="hl">
+            Palavras usadas para fazer perguntas específicas.
+            <ul>
+                <li><b class="kw">What</b> (O que/Qual) - <b class="kw">When</b> (Quando) - <b class="kw">Where</b> (Onde)</li>
+                <li><b class="kw">Who</b> (Quem) - <b class="kw">Whose</b> (De quem) - <b class="kw">Why</b> (Por que)</li>
+            </ul>
+          </div>
+          <div class="example">
+            <b class="kw">What</b> is your favorite color? <small class="translation">(Qual é a sua cor favorita?)</small><br>
+            <b class="kw">Where</b> do you live? <small class="translation">(Onde você mora?)</small><br>
+            <b class="kw">Why</b> are you sad? <small class="translation">(Por que você está triste?)</small>
+          </div>
+          <ol>
+            <li class="exercise">______ is your birthday? (Quando) <input data-key="When" type="text"/></li>
+            <li class="exercise">______ do you live? (Onde) <input data-key="Where" type="text"/></li>
+            <li class="exercise">______ is the President? (Quem) <input data-key="Who" type="text"/></li>
+            <li class="exercise">______ car is this? (De quem) <input data-key="Whose" type="text"/></li>
+            <li class="exercise">______ are you crying? (Por que) <input data-key="Why" type="text"/></li>
+          </ol>
+          <button class="btn primary" onclick="check('aula15')">Verificar</button>
+          <button class="btn ghost" onclick="showKeys('aula15')">Mostrar Gabarito</button>
+          <div class="msg" id="msg-aula15"></div>
+        </section>
+
+        <section class="panel" id="aula16">
+          <h2>16. Phrasal Verbs</h2>
+          <div class="hl">Combinação de um <b class="v">verbo</b> + <b class="kw">preposição/advérbio</b> que cria um novo significado.</div>
+          <div class="example">
+            <b>Wake up:</b> parar de dormir. <br> <span class="s">I</span> usually <b class="v">wake <span class="kw">up</span></b> at 7 AM. <small class="translation">(Eu geralmente acordo às 7 da manhã.)</small><br>
+            <b>Get through:</b> completar com sucesso. <br> <span class="s">I</span> managed to <b class="v">get <span class="kw">through</span></b> my exams. <small class="translation">(Eu consegui passar nas minhas provas.)</small>
+          </div>
+          <ol>
+            <li class="exercise">It's time to ______ (acordar). <input data-key="wake up" type="text"/></li>
+            <li class="exercise">Please ______ (arrumar) your room before guests arrive. <input data-key="tidy up" type="text"/></li>
+            <li class="exercise">Let's ______ (finalizar) this discussion and move on. <input data-key="wrap up" type="text"/></li>
+            <li class="exercise">We need to ______ (reduzir) the amount of sugar we eat. <input data-key="cut down on" type="text"/></li>
+            <li class="exercise">I need to buy groceries; we ______ (ficamos sem) milk. <input data-key="ran out of" type="text"/></li>
+          </ol>
+          <button class="btn primary" onclick="check('aula16')">Verificar</button>
+          <button class="btn ghost" onclick="showKeys('aula16')">Mostrar Gabarito</button>
+          <div class="msg" id="msg-aula16"></div>
+        </section>
+
+        <section class="panel" id="aula3"><h2>3. Weather</h2><div class="hl">Palavras comuns: <b class="kw">sunny, rainy, cloudy, windy, snowy, cold, hot.</b></div><div class="example">It's a <b class="kw">sunny</b> day. <small class="translation">(É um dia ensolarado.)</small><br>It was very <b class="kw">cold</b> yesterday. <small class="translation">(Estava muito frio ontem.)</small></div><ol><li class="exercise">There are no clouds. It's a ______ (sunny) day. <input data-key="sunny" type="text"/></li><li class="exercise">Take an umbrella, it looks ______. (rainy) <input data-key="rainy" type="text"/></li><li class="exercise">Wear a jacket, it's very ______ (cold) outside. <input data-key="cold" type="text"/></li><li class="exercise">The leaves are flying. It's so ______. (windy) <input data-key="windy" type="text"/></li><li class="exercise">In winter, the mountains are often ______. (snowy) <input data-key="snowy" type="text"/></li></ol><button class="btn primary" onclick="check('aula3')">Verificar</button><button class="btn ghost" onclick="showKeys('aula3')">Mostrar Gabarito</button><div class="msg" id="msg-aula3"></div></section>
+        <section class="panel" id="aula4"><h2>4. Family Members</h2><div class="hl">Vocabulário: <b class="kw">father, mother, brother, sister, aunt, cousin, parents.</b></div><div class="example">My <span class="s">mother's</span> son is my <b class="kw">brother</b>. <small class="translation">(O filho da minha mãe é meu irmão.)</small><br>My <span class="s">father</span> and <span class="s">mother</span> are my <b class="kw">parents</b>. <small class="translation">(Meu pai e minha mãe são meus pais.)</small></div><ol><li class="exercise">My mother's son is my ______. <input data-key="brother" type="text"/></li><li class="exercise">My father's sister is my ______. <input data-key="aunt" type="text"/></li><li class="exercise">My aunt's son or daughter is my ______. <input data-key="cousin" type="text"/></li><li class="exercise">My father and mother are my ______. <input data-key="parents" type="text"/></li><li class="exercise">My parent's daughter is my ______. <input data-key="sister" type="text"/></li></ol><button class="btn primary" onclick="check('aula4')">Verificar</button><button class="btn ghost" onclick="showKeys('aula4')">Mostrar Gabarito</button><div class="msg" id="msg-aula4"></div></section>
+        <section class="panel" id="aula5"><h2>5. Whose</h2><div class="hl">"<b class="kw">Whose</b>" pergunta sobre posse ("de quem"). Ex.: <i>Whose book is this?</i></div><div class="example"><b class="kw">Whose</b> car is this? <small class="translation">(De quem é este carro?)</small><br>I don't know <b class="kw">whose</b> keys these are. <small class="translation">(Eu não sei de quem são estas chaves.)</small></div><ol><li class="exercise">______ car is parked outside? <input data-key="Whose" type="text"/></li><li class="exercise">______ keys are on the table? <input data-key="Whose" type="text"/></li><li class="exercise">I don't know ______ idea it was. <input data-key="whose" type="text"/></li><li class="exercise">______ phone is this? It's ringing. <input data-key="Whose" type="text"/></li><li class="exercise">She asked ______ jacket was on the chair. <input data-key="whose" type="text"/></li></ol><button class="btn primary" onclick="check('aula5')">Verificar</button><button class="btn ghost" onclick="showKeys('aula5')">Mostrar Gabarito</button><div class="msg" id="msg-aula5"></div></section>
+        <section class="panel" id="aula6"><h2>6. Possessive Adjectives</h2><div class="hl">Indicam posse antes de um substantivo: <b class="kw">my, your, his, her, its, our, their.</b></div><div class="example">This is <b class="kw">my</b> book. <small class="translation">(Este é o meu livro.)</small><br><b class="kw">Their</b> house is big. <small class="translation">(A casa deles é grande.)</small></div><ol><li class="exercise">This is ______ (my) book. <input data-key="my" type="text"/></li><li class="exercise">Maria is looking for ______ (her) keys. <input data-key="her" type="text"/></li><li class="exercise">The students love ______ (their) new teacher. <input data-key="their" type="text"/></li><li class="exercise">We should finish ______ (our) homework. <input data-key="our" type="text"/></li><li class="exercise">The dog is playing with ______ ball. <input data-key="its" type="text"/></li></ol><button class="btn primary" onclick="check('aula6')">Verificar</button><button class="btn ghost" onclick="showKeys('aula6')">Mostrar Gabarito</button><div class="msg" id="msg-aula6"></div></section>
+        <section class="panel" id="aula12"><h2>13. Object Pronouns</h2><div class="hl">Recebem a ação: <b class="kw">me, you, him, her, it, us, them</b>. Ex: <i>She called <span class="s">me</span>.</i></div><div class="example">She gave the book to <b class="kw">him</b>. <small class="translation">(Ela deu o livro para ele.)</small><br>Can you help <b class="kw">us</b>? <small class="translation">(Você pode nos ajudar?)</small></div><ol><li class="exercise">Can you help ______, please? (me) <input data-key="me" type="text"/></li><li class="exercise">I saw Sarah and gave the book to ______. (her) <input data-key="her" type="text"/></li><li class="exercise">The teacher is talking to the students. She is talking to ______. (them) <input data-key="them" type="text"/></li><li class="exercise">My brother is there. I'm going to talk to ______. (him) <input data-key="him" type="text"/></li><li class="exercise">Do you want to come with ______? (us) <input data-key="us" type="text"/></li></ol><button class="btn primary" onclick="check('aula12')">Verificar</button><button class="btn ghost" onclick="showKeys('aula12')">Mostrar Gabarito</button><div class="msg" id="msg-aula12"></div></section>
+        <section class="panel" id="aula13"><h2>14. Intensifiers</h2><div class="hl">Intensificam adjetivos: <b class="kw">very, really, so, too</b>. Ex.: <i><b class="kw">very</b> good, <b class="kw">too</b> expensive.</i></div><div class="example">The movie was <b class="kw">very</b> interesting. <small class="translation">(O filme foi muito interessante.)</small><br>This coffee is <b class="kw">too</b> hot to drink. <small class="translation">(Este café está quente demais para beber.)</small></div><ol><li class="exercise">The movie was ______ interesting. (very) <input data-key="very|really" type="text"/></li><li class="exercise">This coffee is ______ hot to drink. (too) <input data-key="too" type="text"/></li><li class="exercise">I was ______ tired that I went to bed early. (so) <input data-key="so" type="text"/></li><li class="exercise">That was a ______ good presentation. (really) <input data-key="really|very" type="text"/></li><li class="exercise">She is ______ excited about her vacation. (very) <input data-key="very|really" type="text"/></li></ol><button class="btn primary" onclick="check('aula13')">Verificar</button><button class="btn ghost" onclick="showKeys('aula13')">Mostrar Gabarito</button><div class="msg" id="msg-aula13"></div></section>
+      </div>
+      <footer>
+        Feito com ❤️ para prática de inglês. Use as abas para navegar e aprender.
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.panel');
+    tabs.forEach(t => t.addEventListener('click', () => {
+      tabs.forEach(x=>x.classList.remove('active'));
+      panels.forEach(p=>p.classList.remove('active'));
+      t.classList.add('active');
+      const targetPanel = document.getElementById(t.dataset.target);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+    }));
+
+    function norm(s){
+      return (s||'').toString().trim().toLowerCase().replace(/\s+/g,' ');
+    }
+
+    function check(panelId){
+      const panel = document.getElementById(panelId);
+      const inputs = panel.querySelectorAll('input[type="text"]');
+      let ok = 0;
+      inputs.forEach(inp=>{
+        const expected = inp.dataset.key.split('|').map(norm);
+        const val = norm(inp.value);
+        const match = expected.includes(val);
+        inp.style.outline = match ? '2px solid var(--ok)' : '2px solid var(--error)';
+        if(match) ok++;
+      });
+      const msg = document.getElementById('msg-'+panelId);
+      msg.innerHTML = ok === inputs.length
+        ? `<span class="ok">Perfeito! Você acertou ${ok}/${inputs.length}. ✨</span>`
+        : `<span class="err">Acertos: ${ok}/${inputs.length}. Tente corrigir os erros e verifique novamente.</span>`;
+    }
+
+    function showKeys(panelId){
+      const panel = document.getElementById(panelId);
+      const inputs = panel.querySelectorAll('input[type="text"]');
+      inputs.forEach(inp=>{ inp.value = inp.dataset.key.split('|')[0]; inp.style.outline='2px solid var(--warning)';});
+      const msg = document.getElementById('msg-'+panelId);
+      msg.innerHTML = '<span class="ok">Gabarito exibido. Limpe os campos para tentar de novo!</span>';
+    }
+  </script>
+</body>
+</html>
